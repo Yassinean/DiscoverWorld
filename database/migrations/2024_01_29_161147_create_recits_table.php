@@ -12,14 +12,10 @@
         public function up(): void
         {
             Schema::create('recits', function (Blueprint $table) {
-                $table->bigIncrements('idRecits');
+                $table->bigIncrements('recits_id');
                 $table->string('title');
                 $table->text('description');
-                $table->string('photo');
-                $table->string('aventure');
-                $table->string('destination');
-                $table->date('date_created');
-                $table->date('date_created');
+                $table->text('conseils');
                 $table->timestamps();
             });
         }

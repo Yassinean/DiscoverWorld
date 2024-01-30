@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('photos', function (Blueprint $table) {
-            $table->bigIncrements('photo_id');
-            $table->string('photo');
+        Schema::create('destinations', function (Blueprint $table) {
+            $table->bigIncrements('destination_id');
+            $table->string('destination');
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('destinations');
     }
 };
